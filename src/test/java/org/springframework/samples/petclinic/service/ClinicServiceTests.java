@@ -21,6 +21,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 import java.time.LocalDate;
 import java.util.Collection;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.jdbc.AutoConfigureTestDatabase;
@@ -80,6 +81,11 @@ class ClinicServiceTests {
 	protected VetRepository vets;
 
 	Pageable pageable;
+
+	@Test
+	void testFail() {
+		Assertions.fail("실패하는 테스트 코드");
+	}
 
 	@Test
 	void shouldFindOwnersByLastName() {
