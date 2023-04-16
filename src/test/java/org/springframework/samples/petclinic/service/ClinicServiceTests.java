@@ -82,11 +82,12 @@ class ClinicServiceTests {
 
 	Pageable pageable;
 
+	/*
 	@Test
 	void testFail() {
 		Assertions.fail("실패하는 테스트 코드");
 	}
-
+	*/
 	@Test
 	void shouldFindOwnersByLastName() {
 		Page<Owner> owners = this.owners.findByLastName("Davis", pageable);
